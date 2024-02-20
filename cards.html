@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Cards CSS</title>
+		<meta charset="utf-8">
+		<style>
+			/* To come */
+			img {
+				max-width: 100%;
+			}
+			html, body {
+				height: 100vh;
+			}
+			body {
+				margin: 0;
+                font-family: cursive;
+                font-size: 2em;
+                letter-spacing: 0.05em;
+			}
+			section {
+				height: 100vh;
+				background: black;
+                /*
+                   vertical centering with flexbox:
+                   https://philipwalton.github.io/solved-by-flexbox/demos/vertical-centering/
+                */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+			}
+			.card {
+				width: 450px;
+				height: 300px;
+				background: white;
+				border-radius: 8px;
+				text-align: center;
+                /*
+                   vertical centering with flexbox:
+                   https://philipwalton.github.io/solved-by-flexbox/demos/vertical-centering/
+                */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+			}
+            .logo {
+                width: 100px;
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                z-index: 1;
+            }
+            .name {
+                z-index: 0;
+            }
+            .title {
+                font-size: 12px;
+                text-align: left;
+                position: absolute;
+                bottom: 30px;
+                right:30px;
+                z-index: 1;
+            }
+            .line {
+                background: greenyellow;
+                height: 100%;
+                width: 5px;
+                position: absolute;
+                z-index: 0;
+                left: 50px
+            }
+		</style>
+	</head>
+
+	<body>
+
+		<section>
+		
+			<div class="card">
+                <div class="name">
+                    Donald Kipkulei
+                </div>
+                <div class="logo">
+                    <img src="images/beautiful_kenya.jpeg">
+                </div>
+				<div class="title">
+                    <i>Student</i><br>
+                    VIS 208: Graphic Design<br>
+                    Link<br>
+                    Spring 2024
+                </div>
+                <div class="line"></div>
+			</div>
+
+		</section>
+
+	</body>
+
+</html>
