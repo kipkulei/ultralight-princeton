@@ -1,101 +1,160 @@
 <!DOCTYPE html>
-
 <html>
 
-	<head>
-		<title>Cards CSS</title>
-		<meta charset="utf-8">
-		<style>
-			/* To come */
-			img {
-				max-width: 100%;
-			}
-			html, body {
-				height: 100vh;
-			}
-			body {
-				margin: 0;
-                font-family: cursive;
-                font-size: 2em;
-                letter-spacing: 0.05em;
-			}
-			section {
-				height: 100vh;
-				background: black;
-                /*
-                   vertical centering with flexbox:
-                   https://philipwalton.github.io/solved-by-flexbox/demos/vertical-centering/
-                */
-                display: flex;
-                align-items: center;
-                justify-content: center;
-			}
-			.card {
-				width: 450px;
-				height: 300px;
-				background: white;
-				border-radius: 8px;
-				text-align: center;
-                /*
-                   vertical centering with flexbox:
-                   https://philipwalton.github.io/solved-by-flexbox/demos/vertical-centering/
-                */
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                position: relative;
-			}
-            .logo {
-                width: 100px;
-                position: absolute;
-                top: 10px;
-                left: 10px;
-                z-index: 1;
-            }
-            .name {
-                z-index: 0;
-            }
-            .title {
-                font-size: 12px;
-                text-align: left;
-                position: absolute;
-                bottom: 30px;
-                right:30px;
-                z-index: 1;
-            }
-            .line {
-                background: greenyellow;
-                height: 100%;
-                width: 5px;
-                position: absolute;
-                z-index: 0;
-                left: 50px
-            }
-		</style>
-	</head>
+<head>
+    <title>Cards CSS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <style>
+        /* Common styles for cards */
+        .card {
+            width: 450px;
+            height: 300px;
+            background: rgb(247, 154, 120);
+            border-radius: 8px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 20px; /* Added padding for content */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Added box shadow for depth effect */
+        }
 
-	<body>
+        .logo {
+            width: 100px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 1;
+        }
 
-		<section>
-		
-			<div class="card">
-                <div class="name">
-                    Donald Kipkulei
-                </div>
-                <div class="logo">
-                    <img src="images/beautiful_kenya.jpeg">
-                </div>
-				<div class="title">
-                    <i>Student</i><br>
-                    VIS 208: Graphic Design<br>
-                    Link<br>
-                    Spring 2024
-                </div>
-                <div class="line"></div>
-			</div>
+        .name {
+            z-index: 0;
+        }
 
-		</section>
+        .title {
+            font-size: 12px;
+            text-align: left;
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1;
+        }
 
-	</body>
+        .line {
+            background: greenyellow;
+            height: 70.6%;
+            width: 5px;
+            position: absolute;
+            z-index: 0;
+            left: 50px;
+            bottom: 0;
+        }
+
+        .squiggly {
+            position: absolute;
+            width: 100%;
+            height: 5px;
+            z-index: 0;
+            top: 110px;
+            background-image: linear-gradient(90deg, transparent 40%, greenyellow 40%, greenyellow 60%, transparent 60%);
+            background-size: 10px 100%;
+        }
+
+        .wavy {
+            position: absolute;
+            width: 100%;
+            height: 5px;
+            z-index: 0;
+            top: 100px;
+            background-image: linear-gradient(90deg, transparent 40%, greenyellow 40%, greenyellow 60%, transparent 60%);
+            background-size: 10px 100%;
+            /* Define a wavy background */
+            background-image: linear-gradient(to right, greenyellow 50%, transparent 50%),
+                            linear-gradient(to right, greenyellow 50%, transparent 50%);
+            background-position: 0 2px, 0 3px;
+            background-size: 20px 3px;
+        }
+
+        /* Styles for black background card container */
+        .black-container {
+            height: 100vh;
+            background: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Styles for blue background card container */
+        .blue-container {
+            height: 100vh;
+            background: #007bff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .blue-container .card {
+            background: linear-gradient(135deg, #e9e4e9, #abdcdc, #a1a17a, #7ccb7c, #d1a1a1, rgb(247, 154, 120));;
+        }
+        
+        .footer {
+            font-size: 12px;
+            text-align: center;
+            position: absolute;
+            bottom: 10px;
+            z-index: 1;
+        }
+
+        /* Styles for content within the card */
+        body {
+            margin: 0;
+            font-family: cursive;
+            font-size: 2em;
+            letter-spacing: 0.05em;
+        }
+
+        /* Image styles */
+        img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="black-container">
+        <div class="card">
+            <div class="name">
+                Donald Kipkulei
+            </div>
+            <div class="logo">
+                <img src="images/beautiful_kenya.jpeg">
+            </div>
+            <div class="squiggly"></div>
+            <div class="wavy"></div>
+            <div class="title">
+                <i>Student</i><br>
+                VIS 208: Graphic Design<br>
+                Link<br>
+                Spring 2024
+            </div>
+            <div class="line"></div>
+        </div>
+    </div>
+
+    <div class="blue-container">
+        <div class="card">
+            <div class="name">
+                <i>Princeton University</i><br>
+                <strong>Class of '24</strong>
+            </div>
+            <div class="footer"> This is the back of the card</div>
+    
+        </div>
+    </div>
+</body>
 
 </html>
+
