@@ -14,18 +14,33 @@ a {
     margin-top: 100px;
 } 
 
+@keyframes spinAnimation {
+    from {
+        transform: rotateY(0deg); /* Initial rotation */
+    }
+    to {
+        transform: rotateY(360deg); /* Rotate 360 degrees around the Y-axis */
+    }
+}
 .dish {
     flex: 0 1 calc(33.333% - 20px); /* Adjust width to fit three items per row */
-    margin-bottom: 20px; /* Adjust spacing between rows */
-    padding: 10px; /* Add padding for better spacing */
-    box-sizing: border-box; /* Include padding in width calculation */
-    text-align: center; /* Center align the content */
+    margin-bottom: 20px; 
+    padding: 10px; 
+    box-sizing: border-box; 
+    text-align: center; 
 }
 
 .dish img {
     width: 33.3%; /* Adjust image width to fill the container */
     height: auto;
+    transition: transform 0.3s ease; /* Smooth transition */
 }
+
+.dish img:hover {
+    animation: spinAnimation 1s linear forwards; /* Apply the keyframe animation */
+}
+
+
 
 .title {
     margin-top: 10px; /* Add margin between image and title */
@@ -34,7 +49,9 @@ a {
 .nav-container {
 	text-align: center;
     border-radius: 50px;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav {
@@ -42,11 +59,7 @@ nav {
 	border: 1px solid black;
 	border-radius: 50px;
 	font-size: 2em;
-	margin-bottom: 1em;
 	position: fixed;
-	left: 20em;
-	right: 20em;
-	top: 1em;
 	background: #fffff2;
 }
 
