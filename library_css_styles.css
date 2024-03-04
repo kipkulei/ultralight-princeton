@@ -40,7 +40,16 @@ a {
     animation: spinAnimation 1s linear forwards; /* Apply the keyframe animation */
 }
 
-
+.footer {
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    color: white;
+    font-size: 2em;
+	border-radius: 50px;
+    text-align: center;
+    padding: 10px;
+}
 
 .title {
     margin-top: 10px; /* Add margin between image and title */
