@@ -1,0 +1,61 @@
+body {
+	background-color: #f0be3e;
+    padding: 5em;
+}
+
+a {
+	color: black;
+}
+
+.dish-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    margin-top: 100px;
+} 
+
+.dish {
+    flex: 0 1 calc(33.333% - 20px); /* Adjust width to fit three items per row */
+    margin-bottom: 20px; /* Adjust spacing between rows */
+    padding: 10px; /* Add padding for better spacing */
+    box-sizing: border-box; /* Include padding in width calculation */
+    text-align: center; /* Center align the content */
+}
+
+.dish img {
+    width: 33.3%; /* Adjust image width to fill the container */
+    height: auto;
+}
+
+.title {
+    margin-top: 10px; /* Add margin between image and title */
+}
+
+.nav-container {
+	text-align: center;
+    border-radius: 50px;
+    
+}
+
+nav {
+	padding: 1em;
+	border: 1px solid black;
+	border-radius: 50px;
+	font-size: 2em;
+	margin-bottom: 1em;
+	position: fixed;
+	left: 20em;
+	right: 20em;
+	top: 1em;
+	background: #fffff2;
+}
+
+nav a {
+	display: inline-block;
+	margin: 0.25em;
+	text-decoration: none;
+}
+
+a.current {
+	font-weight: bold;
+}
