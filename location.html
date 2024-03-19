@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>In Situ Website</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <style>
+        main, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .text {
+            text-align: center;
+            font-size: large;
+        }
+
+        .background-container {
+            position: fixed; /* Position the container fixed to cover the viewport */
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-attachment: fixed;
+            z-index: -1;
+            opacity: 0.5;
+            background-image: url(images/windmill_course.jpeg);
+            background-size: cover;
+        }
+
+        .image-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* flex-wrap: wrap; */
+            gap: 10px; /* Gap between images */
+            max-width: 100%; /* Ensure the grid doesn't exceed the width of the viewport */
+            padding: 20px; /* Padding for the grid */
+        }
+
+        .image-container {
+            position: relative; /* Position container relatively for perspective */
+            perspective: 1000px; /* Set perspective for 3D effect */
+            opacity: 1; /* Initial opacity */
+            transition: opacity 0.5s ease-in-out; /* Smooth transition for opacity change */
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            transition: transform 1s; /* Smooth transition for flip animation */
+        }
+
+
+        /* Fade out animation for smaller screens */
+        @media screen and (max-width: 1600px) {
+            .image-container:nth-child(1) {
+                opacity: 0; /* Fade out first image */
+            }
+            .one {
+                color: transparent;
+            }
+            .two {
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            }
+            .five {
+                font-family: 'Times New Roman', Times, serif;
+            }
+            .three {
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            .four {
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+        }
+
+        /* Additional media queries for additional fade-out animations */
+        @media screen and (max-width: 1300px) {
+            .image-container:nth-child(2) {
+                opacity: 0; /* Fade out second image */
+            }
+            .one {
+                color: transparent;
+            }
+            .two {
+                color: transparent;
+            }
+            .five {
+                font-family: 'Times New Roman', Times, serif;
+            }
+            .four {
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            .three {
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+            .image-container:nth-child(3) {
+                opacity: 0; /* Fade out third image */
+            }
+            .one {
+                color: transparent;
+            }
+            .two {
+                color: transparent;
+            }
+            .three {
+                color: transparent;
+            }
+            .four {
+                font-family: 'Times New Roman', Times, serif;
+            }
+            .five {
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+        }
+
+        @media screen and (max-width: 700px) {
+            .image-container:nth-child(4) {
+                opacity: 0; /* Fade out fourth image */
+            }
+            .one {
+                color: transparent;
+            }
+            .two {
+                color: transparent;
+            }
+            .three {
+                color: transparent;
+            }
+            .four {
+                color: transparent;
+            }
+            .five {
+                color: transparent;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-container"></div>
+    <div class="text">
+        <h1>A short trip to NYC</h1>
+        <p>
+            Taking the train to New York City <span class="one">before the end of my spring break </span>proved to be extremely worth it. 
+            We found ourselves drawn to the lively atmosphere of an indoor mini-golf spot called the Swingers Crazy Golf - Nomad. 
+            <span class="two">Stepping inside, we were immediately greeted by the vibrant neon lights and upbeat music that filled the air, 
+            setting the stage for an unforgettable indoor mini-golf experience. As we made our way through the whimsical corridors, 
+            my senses were bombarded by a kaleidoscope of colors and sounds of good music by the DJ at the corner of the first 
+            room at the end of the corridor. </span>We chose to do the Windmill course where each hole presented a new challenge. 
+            <span class="three">With every swing of the club, I could feel the excitement building, the satisfying thud of the ball against 
+            the turf sending a thrill through my fingertips. After an exhilarating round of mini-golf, where I tallied sencond in the 
+            group, we all ventured out into the bustling streets of lower Manhattan,my stomach rumbling in anticipation 
+            of a delicious early dinner.</span> Following the tantalizing aroma of sizzling street food, we stumbled upon a cozy Mexican 
+            eatery tucked away amidst the busy streets. <span class="four">Inside, the warm glow of sunlight filtered through the windows, casting a golden 
+            hue over the eclectic decor. The air was filled with the mouthwatering scent of roasted beef and freshly 
+            brewed coffee, beckoning us to settle in and indulge.</span> As I savored each bite of huevos rancheros and took in the lively 
+            chatter of fellow diners, I couldn't help but feel <span class="five">a sense of contentment wash over me. In that moment, surrounded by the 
+            vibrant energy of New York City, I was reminded of the joy that comes from exploring new places and indulging in</span> the simple pleasures of life. 
+        </p>
+    </div>
+    <main>
+        <div class="image-grid">
+            <div class="image-container">
+                <img src="images/ny1.jpeg" alt="">
+            </div>
+            <div class="image-container">
+                <img src="images/ny2.jpeg" alt="">
+            </div>
+            <div class="image-container">
+                <img src="images/ny3.jpeg" alt="">
+            </div>
+            <div class="image-container">
+                <img src="images/ny4.jpeg" alt="">
+            </div>
+        </div>
+    </main>
+    
+</body>
+
+</html>
+
