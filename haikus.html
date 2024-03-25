@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Engineering Library Haikus</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Comic Sans MS', cursive, sans-serif; 
+        }
+        .background-container {
+            position: fixed; 
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-attachment: fixed;
+            z-index: -1;
+            opacity: 0.5;
+            background-image: url(images/eng_lib_photo.jpeg); 
+            background-size: cover;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .text {
+            padding-top: 100px;
+            font-size: larger;
+            text-align: center;
+        }
+        
+        .back {
+            font-size: larger;
+            text-align: center;
+            padding: 80px;
+        }
+
+        .poem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 100px;
+            padding: 20px;
+            max-width: 800px; 
+            margin: auto; 
+        }
+
+        .poem-container {
+            position: relative;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            border: 2px solid black; 
+            padding: 20px; 
+            background-color: rgba(255, 255, 255, 0.3); 
+            backdrop-filter: blur(10px); 
+        }
+
+        .poem-container:hover {
+            transform: scale(1.50); 
+        }
+
+        .poem {
+            color: purple; 
+            font-size: 20px;
+            text-align: center;
+        }
+
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .poem-container:nth-child(1) {
+            animation: fade-in 1s ease-in-out forwards 0.5s; 
+        }
+
+        .poem-container:nth-child(2) {
+            animation: fade-in 1s ease-in-out forwards 1s; 
+        }
+
+        .poem-container:nth-child(3) {
+            animation: fade-in 1s ease-in-out forwards 1.5s; 
+        }
+
+        .poem-container:nth-child(4) {
+            animation: fade-in 1s ease-in-out forwards 2s;
+        }
+
+        @media screen and (max-width: 600px) {
+            .poem-grid {
+                grid-template-columns: 1fr; 
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="background-container"></div>
+    <div class="text">
+        <h1>Engineering Library Haikus</h1>
+        <p>Welcome to the Engineering Library where I spend some of my time working at the checkout desk!</p>
+    </div>
+
+    <main>
+        <div class="poem-grid">
+            <div class="poem-container">
+                <div class="poem">Sun shines outside</div>
+                <div class="poem">Warm light seeps through</div>
+                <div class="poem">Library comes to life</div>
+            </div>
+            <div class="poem-container">
+                <div class="poem">Doors click open</div>
+                <div class="poem">Feet shuffle around, student coughs</div>
+                <div class="poem">Laptop set, seat rolled, quiet</div>
+            </div>
+            <div class="poem-container">
+                <div class="poem">Keyboard keys clatter</div>
+                <div class="poem">Gentle humming in the background</div>
+                <div class="poem">Book desensitizer awaits</div>
+            </div>
+            <div class="poem-container">
+                <div class="poem">Barcode beeps</div>
+                <div class="poem">Pages flipping before the stamp’s kiss</div>
+                <div class="poem">Book's journey begins</div>
+            </div>
+        </div>
+    </main>
+    <div class="back">
+        <a href="index.html">Thanks for visiting! Click to go back to my homepage!</a>
+    </div>
+</body>
+
+</html>
