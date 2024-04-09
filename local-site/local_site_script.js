@@ -21,34 +21,37 @@ function calculateTimeLeft() {
       return { timeLeft: timeLeft, isOpen: false };
     }
   }
-  
-  // Function to update the countdown timer and progress bar
-  function updateCountdown() {
+
+// Function to update the countdown timer and progress bar
+function updateCountdown() {
     const { timeLeft, isOpen } = calculateTimeLeft();
+    const totalOpeningHours = 15.5; // Total hours the library is open
+
+    let progress;
+    if (isOpen) {
+      const elapsedHours = totalOpeningHours - (timeLeft / (1000 * 60 * 60)); // Calculate elapsed hours since library opened
+      progress = (elapsedHours / totalOpeningHours) * 100; // Calculate progress based on elapsed hours
+    } else {
+      progress = 100; // Library is closed, progress bar is full
+    }
+    document.getElementById("progress-bar-fill").style.width = progress + "%";
+
     const hoursLeft = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutesLeft = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
     const secondsLeft = Math.floor((timeLeft % (1000 * 60)) / 1000);
-  
+
     const libraryStatusElement = document.getElementById("library-status");
     if (isOpen) {
       libraryStatusElement.innerHTML = `Library closes in ${hoursLeft}h ${minutesLeft}m ${secondsLeft}s`;
     } else {
       libraryStatusElement.innerHTML = `Library opens in ${hoursLeft}h ${minutesLeft}m ${secondsLeft}s`;
     }
-  
-    let progress;
-    const totalOpeningHours = 9; // Total hours the library is open
-    if (isOpen) {
-      progress = ((timeLeft) / (totalOpeningHours * 60 * 60 * 1000)) * 100; // Calculate progress based on time left until closing
-    } else {
-      progress = 100; // Library is closed, progress bar is full
-    }
-    document.getElementById("progress-bar-fill").style.width = progress + "%";
-  
+
     if (timeLeft > 0) {
       setTimeout(updateCountdown, 1000); // Update every second
     }
-  }
+}
+
   
   // Initial call to start the countdown
   updateCountdown();

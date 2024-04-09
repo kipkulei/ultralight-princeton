@@ -23,7 +23,7 @@
             background-attachment: fixed;
             z-index: -1;
             opacity: 0.5;
-            background-image: url(images/eng_lib_photo.jpeg); 
+            background-image: url(local_site_images/eng_lib_photo.jpeg); 
             background-size: cover;
         }
 
@@ -57,14 +57,6 @@
             margin-top: 100px;
         } 
 
-        @keyframes spinAnimation {
-            from {
-                transform: rotateY(0deg); /* Initial rotation */
-            }
-            to {
-                transform: rotateY(180deg); /* Rotate 360 degrees around the Y-axis */
-            }
-        }
         .material {
             flex: 0 1 calc(33.333% - 20px); /* Adjust width to fit three items per row */
             margin-bottom: 20px; 
@@ -80,7 +72,7 @@
         }
 
         .material img:hover {
-            animation: spinAnimation 1s linear forwards; /* Apply the keyframe animation */
+            transform: scale(1.2); /* Enlargement effect */
         }
 
         .materials-type {
@@ -98,7 +90,6 @@
             width: 100%;
             background-color: #f0f0f0;
             border-radius: 5px;
-            overflow: hidden;
             margin-top: 70px;
         }
 
@@ -107,12 +98,22 @@
             height: 20px;
             transition: width 1s ease-in-out;
         }
+
+        @media screen and (max-width: 900px) {
+            .material-container {
+                flex-direction: column; 
+                align-items: center; 
+                
+            }
+
+        }
+
     </style>
 </head>
 <body>
 
     <div class="navbar">
-        <a href="local_site.html">Home</a>
+        <a href="index.html">Home</a>
         <a href="">Materials</a>
         <a href="games.html">Games</a>
     </div>
@@ -126,7 +127,7 @@
     <div class="material-container">
         <div class="material">
             <a href="https://www-materialconnexion-com.ezproxy.princeton.edu/780501?activeChild=8201">
-                <img src="images/local_site_images/eko_rubber.jpeg">
+                <img src="local_site_images/eko_rubber.jpeg">
             </a>
             <div class="image-description">
                 <p>Recycled rubber raw material sourced from unused rubber scraps and products. The resin is produced by a method called Advanced Hybrid Devulcanization Method that takes the processed rubber back into its pre-vulcanized state, ready again for processing. Some common applications of this material are in: Accessories, Consumer Electronics Casings, Footwear, Furniture, Safety Equipment, Sports Equipment, and Toys.</p>
@@ -135,7 +136,7 @@
 
         <div class="material">
             <a href="https://www-materialconnexion-com.ezproxy.princeton.edu/659201?activeChild=4554">
-                <img src="images/local_site_images/bt_material.jpeg">
+                <img src="local_site_images/bt_material.jpeg">
             </a>
             <div class="image-description">
                 <p>A modularly flexible composite panel made from balsa end grain for composite and sandwich construction. The material has good durability and excellent compressive strength. Some common applications of this material are in: Lamination, Metal Working Tools, WoodWorking Tools</p>
@@ -144,7 +145,7 @@
 
         <div class="material">
             <a href="https://www-materialconnexion-com.ezproxy.princeton.edu/749801?activeChild=6906">
-                <img src="images/local_site_images/pure_temp.jpeg">
+                <img src="local_site_images/pure_temp.jpeg">
             </a>
             <div class="image-description">
                 <p>Bio-based phase change material (PCM), which changes phase (e.g. melting or freezing) to absorb or release relatively large amounts of latent heat at a constant temperature. When the temperature becomes warmer than the freeze point of the PCM it will liquefy, absorbing and storing heat during the process. Conversely, when the temperature drops, the material will solidify and give off heat, warming the material coated or impregnated with PCM. This material has the capability to keep the temperature constant for an extended period of time. It is mostly applied in casting.</p>
