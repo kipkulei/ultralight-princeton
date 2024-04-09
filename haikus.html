@@ -103,6 +103,26 @@
                 grid-template-columns: 1fr; 
             }
         }
+
+        #c1, #c2, #c3, #c4 {
+            opacity: 0;
+        }
+
+        body[data-status="morning"] #c4 {
+            opacity: 1;
+        }
+
+        body[data-status="afternoon"] #c3 {
+            opacity: 1;
+        }
+
+        body[data-status="evening"] #c2 {
+            opacity: 1;
+        }
+
+        body[data-status="night"] #c1 {
+            opacity: 1;
+        }
     </style>
 </head>
 
@@ -116,31 +136,39 @@
 
     <main>
         <div class="poem-grid">
-            <div class="poem-container">
-                <div class="poem">Sun shines outside</div>
-                <div class="poem">Warm light seeps through</div>
-                <div class="poem">Library comes to life</div>
-            </div>
-            <div class="poem-container">
-                <div class="poem">Doors click open</div>
-                <div class="poem">Feet shuffle around, student coughs</div>
-                <div class="poem">Laptop set, seat rolled, quiet</div>
-            </div>
-            <div class="poem-container">
-                <div class="poem">Keyboard keys clatter</div>
-                <div class="poem">Gentle humming in the background</div>
-                <div class="poem">Book desensitizer awaits</div>
-            </div>
-            <div class="poem-container">
-                <div class="poem">Barcode beeps softly</div>
-                <div class="poem">Pages flipping, stamp’s kiss</div>
-                <div class="poem">Book's journey begins</div>
-            </div>
+            <section id="c1">
+                <div class="poem-container">
+                    <div class="poem">Sun shines outside</div>
+                    <div class="poem">Warm light seeps through</div>
+                    <div class="poem">Library comes to life</div>
+                </div>
+            </section>
+            <section id="c2">
+                <div class="poem-container">
+                    <div class="poem">Doors click open</div>
+                    <div class="poem">Feet shuffle around, student coughs</div>
+                    <div class="poem">Laptop set, seat rolled, quiet</div>
+                </div>
+            </section>
+            <section id="c3">
+                <div class="poem-container">
+                    <div class="poem">Keyboard keys clatter</div>
+                    <div class="poem">Gentle humming in the background</div>
+                    <div class="poem">Book desensitizer awaits</div>
+                </div>
+            </section>
+            <section id="c4">
+                <div class="poem-container">
+                    <div class="poem">Barcode beeps softly</div>
+                    <div class="poem">Pages flipping, stamp’s kiss</div>
+                    <div class="poem">Book's journey begins</div>
+                </div>
+            </section>
         </div>
     </main>
     <div class="back">
         <a href="index.html">Thanks for visiting! Click to go back to my homepage!</a>
     </div>
 </body>
-
+<script src="haiku-script.js"></script>
 </html>
