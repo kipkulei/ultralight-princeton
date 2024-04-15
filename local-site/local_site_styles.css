@@ -1,0 +1,120 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.background-container {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-attachment: fixed;
+    z-index: -1;
+    opacity: 0.25;
+    background-image: url(local_site_images/eng_lib_photo.jpeg); 
+    background-size: cover;
+}
+
+.material-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+    margin: 20px;
+    width: 100%;
+} 
+
+.material {
+    flex: 0 1 calc(33.333% - 20px); 
+    margin-bottom: 20px; 
+    padding: 10px; 
+    box-sizing: border-box; 
+    text-align: center; 
+}
+
+.material img {
+    width: 33.3%; /* Adjust image width to fill the container */
+    height: auto;
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.material:hover img {
+    transform: scale(1.2); /* Enlargement effect */
+}
+
+.materials-type {
+    margin: 60px;
+    text-align: center;
+}
+
+
+.library-status {
+    text-align: center;
+    padding: 20px;
+    font-size: x-large;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    margin-top: 70px;
+}
+
+.progress-bar-fill {
+    background-color: #007bff;
+    height: 20px;
+    transition: width 1s ease-in-out;
+}
+
+.text {
+    text-align: center;
+    color:  black;
+    margin: 30px;
+}
+
+.back {
+    text-align: center;
+    padding: 50px;
+}
+
+.image-description {
+    padding: 40px;
+    font-size:x-large;
+}
+
+.full-description {
+    display: none;
+}
+
+.material:hover .short-description {
+    display: none;
+}
+
+.material:hover .full-description {
+    display: block;
+}
+
+@media screen and (max-width: 900px) {
+    .material-container {
+        flex-direction: column; 
+        align-items: center; 
+        
+    }
+
+}
+
+#morning, #afternoon, #evening, #night {
+    display: none;
+}
+
+body[data-status="morning"] #morning, 
+body[data-status="afternoon"] #afternoon, 
+body[data-status="evening"] #evening,
+body[data-status="night"] #night {
+    display: flex;
+}

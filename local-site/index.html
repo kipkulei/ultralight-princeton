@@ -1,106 +1,161 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Home</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            font-family: 'Comic Sans MS', cursive, sans-serif; 
-        }
-        .background-container {
-            position: fixed; 
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-attachment: fixed;
-            z-index: -1;
-            opacity: 0.5;
-            background-image: url(local_site_images/eng_lib_photo.jpeg); 
-            background-size: cover;
-        }
-        .navbar {
-            background-color: #333;
-            overflow: hidden;
-            text-align: center;
-        }
-
-        .navbar a {
-            display: inline-block;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 14px 20px;
-            text-decoration: none;
-        }
-
-        .navbar a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-
-        .text {
-            text-align: center;
-            color:  black;
-            margin-top: 100px; /* Adjust as needed */
-        }
-
-        .back {
-            text-align: center;
-            margin-top: 20px;
-            
-        }
-
-        .library-status {
-            text-align: center;
-            padding: 20px;
-            font-size: x-large;
-        }
-
-        .progress-bar {
-            width: 100%;
-            background-color: #f0f0f0;
-            border-radius: 5px;
-            overflow: hidden;
-            margin-top: 70px;
-        }
-        
-        .progress-bar-fill {
-            background-color: #007bff;
-            height: 20px;
-            transition: width 1s ease-in-out;
-        }
-
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Samples Collection</title>
+    <link rel="stylesheet" href="local_site_styles.css">
 </head>
-
 <body>
 
-    <div class="navbar">
-        <a href="">Home</a>
-        <a href="materials.html">Materials</a>
-        <a href="games.html">Games</a>
-    </div>
-    
     <div class="background-container"></div>
+
     <div class="text">
-        <h1>Engineering Library</h1>
-        <p>Welcome to the Engineering Library where I spend some of my time working at the checkout desk!</p>
+        <h1>Material Samples at Engineering Library</h1>
+        <p>Welcome to the Engineering Library!</p>
+        <p>Visit this site at <strong>different times of day</strong> to find out about various material samples at display in this library, then hopefully visit in-person to interact wth them.</p>
+        <p>Enjoy!</p>
     </div>
 
-    <div class="progress-bar">
-        <div class="progress-bar-fill" id="progress-bar-fill"></div>
+    <div class="materials-grid">
+        <div class="materials-type">
+            <h2>Morning: Natural Materials</h2>
+        </div>
+        <div id="morning">
+            <div class="material-container">
+                <div class="material">
+                    <img src="local_site_images/eko_rubber.jpeg">
+                   
+                    <div class="image-description">
+                        <p class="short-description">Recycled rubber raw...</p>
+                        <p class="full-description">Recycled rubber raw material sourced from unused rubber scraps and products. The resin is produced by a method called Advanced Hybrid Devulcanization Method that takes the processed rubber back into its pre-vulcanized state, ready again for processing. Some common applications of this material are in: Accessories, Consumer Electronics Casings, Footwear, Furniture, Safety Equipment, Sports Equipment, and Toys.</p>
+                    </div>
+                </div>
+        
+                <div class="material">
+                    <img src="local_site_images/bt_material.jpeg">
+    
+                    <div class="image-description">
+                        <p class="short-description">A modularly flexible...</p>
+                        <p class="full-description">A modularly flexible composite panel made from balsa end grain for composite and sandwich construction. The material has good durability and excellent compressive strength. Some common applications of this material are in: Lamination, Metal Working Tools, WoodWorking Tools</p>
+                    </div>
+                </div>
+        
+                <div class="material">
+                    <img src="local_site_images/pure_temp.jpeg">
+    
+                    <div class="image-description">
+                        <p class="short-description">Bio-based phase change...</p>
+                        <p class="full-description">Bio-based phase change material (PCM), which changes phase (e.g. melting or freezing) to absorb or release relatively large amounts of latent heat at a constant temperature. When the temperature becomes warmer than the freeze point of the PCM it will liquefy, absorbing and storing heat during the process. Conversely, when the temperature drops, the material will solidify and give off heat, warming the material coated or impregnated with PCM. This material has the capability to keep the temperature constant for an extended period of time. It is mostly applied in casting.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="afternoon">
+            <div class="material-container">
+                <div class="material">
+                    <img src="local_site_images/elegance.jpeg">
+                   
+                    <div class="image-description">
+                        <p class="short-description">Flexible, light-weight...</p>
+                        <p class="full-description">Flexible, light-weight translucent woven metal mesh for use in interior and exterior applications. Fine stainless steel filaments produce a horizontal mesh that can be folded or curved to suit. Some of its common applications are in: Die Cutting, Lamination, Metal Working Tools, Stitching, Welding</p>
+                    </div>
+                </div>
+        
+                <div class="material">
+                    <img src="local_site_images/alpolic.jpeg">
+    
+                    <div class="image-description">
+                        <p class="short-description">Highly reflective hard-anodized...</p>
+                        <p class="full-description">Highly reflective hard-anodized aluminum composite. This material is intended as an alternative to glass, tempered glass and acrylic for mirrored surfaces as it is thinner, lighter in weight, will not shatter or break, and is easy to fabricate and install. Additionally this smooth, rigid and durable composite has a higher conductivity than acrylic so it does not collect dust. Some of its common applications are in: Cold Pressing/Deep Drawing, Die Cutting, Metal Working Tools, Printing, WoodWorking Tools</p>
+                    </div>
+                </div>
+        
+                <div class="material">
+                    <img src="local_site_images/textrafine.jpeg">
+    
+                    <div class="image-description">
+                        <p class="short-description">Blanket insulation composed...</p>
+                        <p class="full-description">Blanket insulation composed of 80% recovered long fiber, filament glass, with a 90% total recycled content. The insulation is manufactured by a unique process where long, textile-type glass fibers are bonded together in random orientation by a stable thermosetting resin, which produces a strong, resilient insulation that will return to full thickness following compression. Some of its common applications are in: Die Cutting, Lamination, Metal Working Tools, Stitching, WoodWorking Tools</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="evening">
+            <div class="material-container">
+                <div class="material">
+                    <img src="local_site_images/cementfoam.jpeg">
+                   
+                    <div class="image-description">
+                        <p class="short-description">Lightweight building material...</p>
+                        <p class="full-description">Lightweight building material composed of 60% expanded polystyrene foam (EPS) and a 40% cement layer which is reinforced with a textile mesh. The material is insulating, flame retardant, moisture resistant, contains no VOCs, and is sound absorbing.</p>
+                    </div>
+                </div>
+        
+                <div class="material">
+                    <img src="local_site_images/filigree.jpeg">
+    
+                    <div class="image-description">
+                        <p class="short-description">Metallized carbon fibers...</p>
+                        <p class="full-description">Metallized carbon fibers to create functional carbon fiber reinforced plastics (CFRP) as well as new fiber-reinforced metals for use in component monitoring, lightning and wear protection in aerospace, automotive and renewable energy sectors. Carbon fibers and CFRP are widely replacing metallic materials for their light-weighting benefits. Some of its common applications are in: Architectural Elements, Mass Transportation, Medical Devices, Safety Equipment</p>
+                    </div>
+                </div>
+        
+                <div class="material">
+                    <img src="local_site_images/sit_grid.jpeg">
+    
+                    <div class="image-description">
+                        <p class="short-description">3D textile composed...</p>
+                        <p class="full-description">3D textile composed of top and bottom lattices of carbon fiber, polyester (PET) or polypropylene (PP) binding yarns, and a “pilewarp” of polyethylene (PE) monofilament to create the spacial structure. The advantage of carbon over other materials for concrete reinforcement, including conventional steel or glass fiber, is its superior resistance to alkalis and corrosion; this material makes it unnecessary to have a thick exterior concrete covering in order to protect the reinforcement from corrosion. It is mostly applied in casting.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="night">
+            <div class="material-container">
+                <div class="material">
+                    <img src="local_site_images/techno_gel.jpeg">
+                   
+                    <div class="image-description">
+                        <p class="short-description">A breathable, dimensionally...</p>
+                        <p class="full-description">A breathable, dimensionally stable, polyurethane-based gel that is shock absorbent and distributes pressure equally. The gel is flexible and elastic with good recovery properties. It does not contain plasticizers or other volatile components so it is stable and retains its properties over an extended time. It can be stamped or cut into shaped sheets, individually molded into shapes, directly laminated with decorative materials during manufacture, or bonded later with standard polyurethane glue. Some of its common applications are in: Die Cutting, and Lamination</p>
+                    </div>
+                </div>
+        
+                <div class="material">
+                    <img src="local_site_images/koroyd.jpeg">
+    
+                    <div class="image-description">
+                        <p class="short-description">An engineered thermoplastic...</p>
+                        <p class="full-description">An engineered thermoplastic honeycomb comprised of a co-extruded polycarbonate (PC) for energy absorption. This structure provides uniform mechanical properties due to its circular cell structure, and offers high compressive strength in a low-density material, decreasing transmitted force and peak g-force acceleration. The honeycomb is an efficient energy absorber, which is vital to impact protection, and is highly breathable. Some of its applications are in: Die Cutting, Lamination, Metal Working Tools, Thermoforming/Compression Molding, and WoodWorking Tools</p>
+                    </div>
+                </div>
+        
+                <div class="material">
+                    <img src="local_site_images/lumina_spark.jpeg">
+    
+                    <div class="image-description">
+                        <p class="short-description">Acrylic (PMMA) vertical surface...</p>
+                        <p class="full-description">Acrylic (PMMA) vertical surface interior architectural panels that transform single light sources from one edge to the entire surfaces within which thousands of points of light appear to seemingly float. This is created by light reflected against a back mirrored or colored surface and a variety of ‘cuts’ in the core section of the material, giving a depth effect. Some of its common applications are in: Lamination, Metal Working Tools, WoodWorking Tools</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     
-    <div class="library-status" id="library-status"></div>
     
+
+    <div class="progress-bar">
+    <div class="progress-bar-fill" id="progress-bar-fill"></div>
+    </div>
+
+    <div class="library-status" id="library-status"></div>
+
     <div class="back">
         <a href="file:///Users/komen/Desktop/ultralight-princeton/index.html">Thanks for visiting! Click to go back to my homepage!</a>
     </div>
+
 </body>
-<script src="local_site_script.js"></script>
+<script src="update_countdown.js"></script>
+<script src="update_materials.js"></script>
 </html>
