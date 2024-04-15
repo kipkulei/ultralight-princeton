@@ -73,6 +73,19 @@ body, html {
     height: 20px;
     transition: width 1s ease-in-out;
 }
+
+.sun-moon-icon {
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+.sun-moon-icon img {
+    border-radius: 15px;
+    background: transparent;
+    max-width: 150px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 1);
+}
+
 .text {
     text-align: center;
     font-size: larger;
