@@ -19,35 +19,35 @@ body, html {
     background-image: url(local_site_images/eng_lib_photo.jpeg); 
     background-size: cover;
 }
-
+.materials-grid {
+    max-width: 100vw;
+}
 .material-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around; 
+    justify-content: space-between; 
     margin: 20px;
-    width: 100%;
+    width: 100vw;
 } 
 
 .material {
     flex: 0 1 calc(33.333% - 20px); 
     margin-bottom: 20px; 
     padding: 10px; 
-    box-sizing: border-box; 
     text-align: center; 
 }
 
 .material img {
-    width: 33.3%; /* Adjust image width to fill the container */
+    width: 33.3%; 
     height: auto;
-    transition: transform 0.3s ease; /* Smooth transition */
+    transition: transform 0.3s ease; 
 }
 
 .material:hover img {
-    transform: scale(1.2); /* Enlargement effect */
+    transform: scale(1.2); 
 }
 
 .materials-type {
-    margin: 60px;
+    margin-top: 150px;
     text-align: center;
 }
 
@@ -70,11 +70,8 @@ body, html {
     height: 20px;
     transition: width 1s ease-in-out;
 }
-
 .text {
     text-align: center;
-    color:  black;
-    margin: 30px;
 }
 
 .back {
@@ -99,11 +96,15 @@ body, html {
     display: block;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1300px) {
     .material-container {
-        flex-direction: column; 
-        align-items: center; 
-        
+        display: grid;
+        grid-template-columns: 1fr; 
+    }
+
+    .material {
+        width: 100%; 
+        margin-top: 30px;
     }
 
 }
