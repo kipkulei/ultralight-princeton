@@ -138,3 +138,19 @@ body[data-status="evening"] #evening,
 body[data-status="night"] #night {
     display: flex;
 }
+
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: royalblue;
+}
+
+.grey {
+    background-color: grey;
+}
+
+.pink {
+    background-color: palevioletred;
+}

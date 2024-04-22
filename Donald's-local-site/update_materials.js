@@ -10,7 +10,7 @@ function updateTimeStatus() {
       h2Element.textContent = "Morning: Natural Materials";
     } else if (hour >= 12 && hour < 17) {
       status = "afternoon";
-      h2Element.textContent = "Afternoon: Ceramics";
+      h2Element.textContent = "Afternoon: Metals";
     } else if (hour >= 17 && hour < 21) {
       status = "evening";
       h2Element.textContent = "Evening: Carbon-Based Materials";
